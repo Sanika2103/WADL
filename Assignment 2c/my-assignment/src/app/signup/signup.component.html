@@ -1,0 +1,19 @@
+<div class="container py-5">
+	<div class="col-12 col-sm-10 col-md-6 col-lg-4 m-auto border shadow rounded p-4">
+		<h3 class="mb-4 pb-2 border-bottom">User Signup</h3>
+		<div class="mb-3">
+			<label for="username" class="form-label">username</label>
+			<input type="username" class="form-control" name="username" #username aria-describedby="usernameHelpId" placeholder="abc">
+			<small id="usernameHelpId" class="form-text text-danger">{{usernameError}}</small>
+		</div>
+		<div class="mb-3">
+			<label for="" class="form-label">Password</label>
+			<input type="password" class="form-control" name="password" #password aria-describedby="passwordHelpId" placeholder="Your Password">
+			<small id="passwordHelpId" class="form-text text-danger">{{passwordError}}</small>
+		</div>
+		<button type="button" class="btn btn-primary" #loginBtn (click)="getData(username.value, password.value)">Login</button>
+		<br>
+		<hr />
+		<a href="/login">Already Have An Account?</a>
+	</div>
+</div>
